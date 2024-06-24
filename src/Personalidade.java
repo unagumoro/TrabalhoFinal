@@ -1,13 +1,12 @@
 public class Personalidade {
-    public static final Personalidade DADOS = new Personalidade("Dados");
-    public static final Personalidade PESSOAS = new Personalidade("Pessoas");
-    public static final Personalidade CRIATIVIDADE = new Personalidade("Criatividade");
-    public static final Personalidade TECNICA = new Personalidade("Técnica");
-    public static final Personalidade DADOS2 = new Personalidade("Dados2");
-    public static final Personalidade PESSOAS2 = new Personalidade("Pessoas2");
-    public static final Personalidade CRIATIVIDADE2 = new Personalidade("Criatividade2");
-    public static final Personalidade TECNICA2 = new Personalidade("Técnica2");
-    // Adicione os outros tipos de personalidade conforme necessário
+    public static final Personalidade P1 = new Personalidade("P1");
+    public static final Personalidade P2 = new Personalidade("P2");
+    public static final Personalidade P3 = new Personalidade("P3");
+    public static final Personalidade P4 = new Personalidade("P4");
+    public static final Personalidade P5 = new Personalidade("P5");
+    public static final Personalidade P6 = new Personalidade("P6");
+    public static final Personalidade P7 = new Personalidade("P7");
+    public static final Personalidade P8 = new Personalidade("P8");
 
     private String nome;
     private int pontuacao;
@@ -21,11 +20,30 @@ public class Personalidade {
         return nome;
     }
 
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
     public int getPontuacao() {
         return pontuacao;
     }
 
+    public void setPontuacao(int pontuacao) {
+        this.pontuacao = pontuacao;
+    }
+
     public void incrementarPontuacao() {
         this.pontuacao++;
+    }
+
+    public void atualizarPontuacao(boolean resposta) {
+        if (resposta) {
+            incrementarPontuacao();
+        }
+    }
+
+    @Override
+    public String toString() {
+    return nome;
     }
 }
