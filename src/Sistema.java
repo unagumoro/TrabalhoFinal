@@ -17,7 +17,12 @@ public class Sistema {
 
         switch (op) {
             case 1:
+                System.out.print("Digite seu nome: ");
+                String nomeUsuario = Console.lerString();
                 Lista.apresentarPerguntas(perguntas);
+                Console.quiz(perguntas, nomeUsuario);
+                Console.armazenarResultado(nomeUsuario, perguntas);
+                Console.exibirResultado(nomeUsuario, perguntas);
                 break;
 
             case 2:
@@ -64,6 +69,9 @@ public class Sistema {
                 break;
 
             case 3:
+                
+                Console.exibirResultados();
+                break;
 
             case 0:
 
