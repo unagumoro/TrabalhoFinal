@@ -4,73 +4,28 @@ public class Sistema {
     private static void exibirMenu() {
         System.out.println("\nMENU");
         System.out.println("1) Jogar");
-        System.out.println("2) Cadastro");
-        System.out.println("3) Resultados");
+        System.out.println("2) Resultados");
         System.out.println("0) Sair");
         System.out.print("Informe uma opção: ");
     }
 
     private static void verificarOpcao(int op, List<Pergunta> perguntas) {
-        int id;
-        String opc;
-        String nome;
 
         switch (op) {
             case 1:
                 System.out.print("Digite seu nome: ");
                 String nomeUsuario = Console.lerString();
+                Personalidade.reiniciarPontuacoes();
                 Lista.apresentarPerguntas(perguntas);
-                Console.quiz(perguntas, nomeUsuario);
-                Console.armazenarResultado(nomeUsuario, perguntas);
-                Console.exibirResultado(nomeUsuario, perguntas);
+                Resultados.quiz(perguntas, nomeUsuario);
+                Resultados.armazenarResultado(nomeUsuario, perguntas);
+                Resultados.exibirResultado(nomeUsuario, perguntas);
                 break;
 
             case 2:
-                System.out.println("\nO que deseja?");
-                System.out.println("Cadastrar Usuário (Digite C)");
-                System.out.println("Excluir Usuário (Digite E)");
-                System.out.print("Informe uma opção: ");
-
-                opc = Console.lerString();
-
-                if (opc.equals("C")) {
-
-                    System.out.print("ID: ");
-                    id = Console.lerInt();
-
-                    System.out.print("Nome: ");
-                    nome = Console.lerString();
-
-                    Usuario usuario = new Usuario(id, nome);
-
-                    Cadastro.cadastrar(usuario);
-
-                    System.out.println("\nUsuário cadastrado com sucesso!");
-
-                } else if (opc.equals("E")) {
-
-                    System.out.print("ID: ");
-                    id = Console.lerInt();
-
-                    boolean excluido = Cadastro.excluir(id);
-
-                    if (excluido) {
-                        System.out.println("Usuário excluído com sucesso");
-                    }
-
-                    System.out.println("Usuário não encontrado");
-
-                } else {
-
-                    System.out.println("Opção inválida. Por favor, tente novamente.");
-
-                }
-
-                break;
-
-            case 3:
                 
-                Console.exibirResultados();
+                Resultados.exibirResultados();
+                Resultados.salvarResultados();
                 break;
 
             case 0:

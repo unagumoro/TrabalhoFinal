@@ -1,15 +1,15 @@
 public class Pergunta {
     private String pergunta;
-    private String resposta1;
-    private String resposta2;
+    private String opcao1;
+    private String opcao2;
     private Personalidade personalidade1;
     private Personalidade personalidade2;
 
-    public Pergunta(String pergunta, String resposta1, Personalidade personalidade1, String resposta2, Personalidade personalidade2) {
+    public Pergunta(String pergunta, String opcao1, Personalidade personalidade1, String opcao2, Personalidade personalidade2) {
         this.pergunta = pergunta;
-        this.resposta1 = resposta1;
+        this.opcao1 = opcao1;
         this.personalidade1 = personalidade1;
-        this.resposta2 = resposta2;
+        this.opcao2 = opcao2;
         this.personalidade2 = personalidade2;
     }
 
@@ -21,12 +21,12 @@ public class Pergunta {
         this.pergunta = pergunta;
     }
 
-    public String getResposta1() {
-        return resposta1;
+    public String getOpcao1() {
+        return opcao1;
     }
 
-    public void setResposta1(String resposta1) {
-        this.resposta1 = resposta1;
+    public void setOpcao1(String opcao1) {
+        this.opcao1 = opcao1;
     }
 
     public Personalidade getPersonalidade1() {
@@ -37,12 +37,12 @@ public class Pergunta {
         this.personalidade1 = personalidade1;
     }
 
-    public String getResposta2() {
-        return resposta2;
+    public String getOpcao2() {
+        return opcao2;
     }
 
-    public void setResposta2(String resposta2) {
-        this.resposta2 = resposta2;
+    public void setOpcao2(String opcao2) {
+        this.opcao2 = opcao2;
     }
 
     public Personalidade getPersonalidade2() {

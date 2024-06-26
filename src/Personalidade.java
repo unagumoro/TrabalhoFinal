@@ -1,12 +1,12 @@
 public class Personalidade {
-    public static final Personalidade P1 = new Personalidade("P1");
-    public static final Personalidade P2 = new Personalidade("P2");
-    public static final Personalidade P3 = new Personalidade("P3");
-    public static final Personalidade P4 = new Personalidade("P4");
-    public static final Personalidade P5 = new Personalidade("P5");
-    public static final Personalidade P6 = new Personalidade("P6");
-    public static final Personalidade P7 = new Personalidade("P7");
-    public static final Personalidade P8 = new Personalidade("P8");
+    public static final Personalidade E = new Personalidade("E");
+    public static final Personalidade I = new Personalidade("I");
+    public static final Personalidade S = new Personalidade("S");
+    public static final Personalidade N = new Personalidade("N");
+    public static final Personalidade T = new Personalidade("T");
+    public static final Personalidade F = new Personalidade("F");
+    public static final Personalidade P = new Personalidade("P");
+    public static final Personalidade J = new Personalidade("J");
 
     private String nome;
     private int pontuacao;
@@ -42,8 +42,27 @@ public class Personalidade {
         }
     }
 
+    public void reiniciarPontuacao() {
+        this.pontuacao = 0;
+    }
+
+    public static void reiniciarPontuacoes() {
+        for (Personalidade personalidade : values()) {
+            personalidade.reiniciarPontuacao();
+        }
+    }
+
     public static Personalidade[] values() {
-        return new Personalidade[]{P1, P2, P3, P4, P5, P6, P7, P8};
+        return new Personalidade[]{E, I, S, N, T, F, P, J};
+    }
+
+    public static Personalidade getPersonalidadePorNome(String nome) {
+        for (Personalidade p : values()) {
+            if (p.getNome().equals(nome)) {
+                return p;
+            }
+        }
+        return null;
     }
 
     @Override
