@@ -7,82 +7,147 @@ public class Lista {
 
         perguntas.add(new Pergunta(
                 "\nPergunta 1: Você geralmente prefere tomar decisões do dia-a-dia...",
-                "Quando surgem", Personalidade.P,
-                "Com o devido planejamento", Personalidade.J));
+                "Quando surgem (P)", Personalidade.P,
+                "Com o devido planejamento (J)", Personalidade.J));
 
         perguntas.add(new Pergunta(
                 "\nPergunta 2: Existe mais gratificação em...",
-                "Resolver um assunto", Personalidade.J,
-                "Discutir um assunto", Personalidade.P));
-
+                "Resolver um assunto (J)", Personalidade.J,
+                "Discutir um assunto (P)", Personalidade.P));
+ 
         perguntas.add(new Pergunta(
                 "\nPergunta 3: Você costuma ser mais...",
-                "Quieto", Personalidade.I,
-                "Falante", Personalidade.E));
+                "Quieto (I)", Personalidade.I,
+                "Falante (E)", Personalidade.E));
 
         perguntas.add(new Pergunta(
                 "\nPergunta 4: Você diria que se sente atraído por um trabalho que é mais...",
-                "Concreto", Personalidade.S,
-                "Técnico", Personalidade.N));
+                "Concreto (S)", Personalidade.S,
+                "Técnico (N)", Personalidade.N));
         
         perguntas.add(new Pergunta(
                 "\nPergunta 5: Você se considera uma pessoa que gosta de focar mais em...",
-                "O que é", Personalidade.I,
-                "O que poderia ser", Personalidade.E));
+                "O que é (I)", Personalidade.I,
+                "O que poderia ser (E)", Personalidade.E));
 
         perguntas.add(new Pergunta(
                 "\nPergunta 6: Você acha que fazer novos contatos pessoais é...",
-                "Um pouco desajeitado ou desgastante", Personalidade.I,
-                "Revigorante", Personalidade.E));
+                "Um pouco desajeitado ou desgastante (I)", Personalidade.I,
+                "Revigorante (E)", Personalidade.E));
 
         perguntas.add(new Pergunta(
                 "\nPergunta 7: Você costuma ser mais...",
-                "Sentimental", Personalidade.F,
-                "Analítico", Personalidade.T));
+                "Sentimental (T)", Personalidade.T,
+                "Analítico (F)", Personalidade.F));
 
         perguntas.add(new Pergunta(
                 "\nPergunta 8: Te dá mais satisfação no trabalho...",
-                "Ir com o fluxo", Personalidade.P,
-                "Manter organização", Personalidade.J));
+                "Ir com o fluxo (P)", Personalidade.P,
+                "Manter organização (J)", Personalidade.J));
 
         perguntas.add(new Pergunta(
                 "\nPergunta 9: Sonhar para você é...",
-                "Inspirador e esclarecedor", Personalidade.N,
-                "Uma perda de tempo e energia, a menos que haja um propósito prático", Personalidade.S));
+                "Inspirador e esclarecedor (N)", Personalidade.N,
+                "Uma perda de tempo e energia, a menos que haja um propósito prático (S)", Personalidade.S));
 
         perguntas.add(new Pergunta(
                 "\nPergunta 10: Você se sente mais atraído por um trabalho que você pode...",
-                "Imaginar e inventar", Personalidade.N,
-                "Ver e tocar", Personalidade.S));
+                "Imaginar e inventar (N)", Personalidade.N,
+                "Ver e tocar (S)", Personalidade.S));
         
         perguntas.add(new Pergunta(
                 "\nPergunta 11: Você costuma ser mais...",
-                "Direto", Personalidade.E,
-                "Reflexivo", Personalidade.I));
+                "Direto (E)", Personalidade.E,
+                "Reflexivo (I)", Personalidade.I));
 
         perguntas.add(new Pergunta(
                 "\nPergunta 12: É mais provável que você conduza uma reunião de maneira...",
-                "Planejada", Personalidade.J,
-                "Improvisada", Personalidade.P));
+                "Planejada (J)", Personalidade.J,
+                "Improvisada (P)", Personalidade.P));
                 
         perguntas.add(new Pergunta(
                 "\nPergunta 13: Você considera pior falta de...",
-                "Emoção", Personalidade.F,
-                "Razão", Personalidade.T));
+                "Emoção (T)", Personalidade.T,
+                "Razão (F)", Personalidade.F));
 
         perguntas.add(new Pergunta(
                 "\nPergunta 14: Você foi designado para entender melhor um problema que aconteceu no trabalho. Sua primeira ação é...",
-                "Investigar os fatos e dados", Personalidade.T,
-                "Assistir ao vídeo das pessoas envolvidas contando como se sentiram", Personalidade.F));
+                "Investigar os fatos e dados (F)", Personalidade.F,
+                "Assistir ao vídeo das pessoas envolvidas contando como se sentiram (T)", Personalidade.T));
 
         perguntas.add(new Pergunta(
                 "\nPergunta 15: Em uma reunião você costuma mais...",
-                "Falar bastante", Personalidade.E,
-                "Ficar quieto e escutar", Personalidade.I));
+                "Falar bastante (E)", Personalidade.E,
+                "Ficar quieto e escutar (I)", Personalidade.I));
+
+        perguntas.add(new Pergunta(
+                "\nPergunta 16: No trabalho, você prefere focar mais...",
+                "No aqui e agora (S)", Personalidade.S,
+                "Nas possibilidades futuras (N)", Personalidade.N));
+
+        perguntas.add(new Pergunta(
+                "\nPergunta 17: Em uma confraternização de trabalho, você estaria mais propenso a interagir com...",
+                "Todos, incluindo recém-chegados (E)", Personalidade.E,
+                "Poucos, apenas os mais íntimos (I)", Personalidade.I));
+
+        perguntas.add(new Pergunta(
+                "\nPergunta 18: Ao tomar decisões, você fica mais contente quando...",
+                "Você sabe que tomou uma decisão final (J)", Personalidade.J,
+                "Há flexibilidade o suficiente para mudar de decisão se achar necessário (P)", Personalidade.P));
+
+        perguntas.add(new Pergunta(
+                "\nPergunta 19: Em geral, você enxerga a vida mais...",
+                "Cinza (N)", Personalidade.N,
+                "Preto e branco (S)", Personalidade.S));
+
+        perguntas.add(new Pergunta(
+                "\nPergunta 20: Você costuma ser mais...",
+                "Conceitual (N)", Personalidade.N,
+                "Prático (S)", Personalidade.S));
+
+        perguntas.add(new Pergunta(
+                "\nPergunta 21: Durante conversas com colegas você tem mais tendência a...",
+                "Refletir e depois falar (I)", Personalidade.I,
+                "Falar e depois refletir (E)", Personalidade.E));
+
+        perguntas.add(new Pergunta(
+                "\nPergunta 22: Você costuma se guiar mais por...",
+                "Visões (N)", Personalidade.N,
+                "Feitos (S)", Personalidade.S));
+
+        perguntas.add(new Pergunta(
+                "\nPergunta 23: Você é uma pessoa mais inclinada a...",
+                "Estar no controle (J)", Personalidade.J,
+                "Ser adaptável (P)", Personalidade.P));
+
+        perguntas.add(new Pergunta(
+                "\nPergunta 24: Você se considera uma pessoa mais...",
+                "Flexível (P)", Personalidade.P,
+                "Planejadora (J)", Personalidade.J));
+
+        perguntas.add(new Pergunta(
+                "\nPergunta 25: No geral, você se considera mais...",
+                "Empático, compreensivo (T)", Personalidade.T,
+                "Objetivo, metódico (F)", Personalidade.F));
+
+        perguntas.add(new Pergunta(
+                "\nPergunta 26: Você tende a ser persuadido por...",
+                "Fatos e dados (F)", Personalidade.F,
+                "Sinceridade e entusiasmo (T)", Personalidade.T));
+
+        perguntas.add(new Pergunta(
+                "\nPergunta 27: Você tende a elogiar alguém por sua...",
+                "Clareza e intuição (F)", Personalidade.F,
+                "Compaixão (T)", Personalidade.T));
+
+        perguntas.add(new Pergunta(
+                "\nPergunta 28: Você prefere trabalhar...",
+                "No improviso (P)", Personalidade.P,
+                "Com prazos (J)", Personalidade.J));
 
         return perguntas;
     }
-
+    
     public static void apresentarPerguntas(List<Pergunta> perguntas) {
         for (Pergunta pergunta : perguntas) {
             System.out.println(pergunta.getPergunta());
