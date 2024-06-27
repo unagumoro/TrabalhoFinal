@@ -148,7 +148,6 @@ public class Lista {
         return perguntas;
     }
 
-
     public static void apresentarPerguntas(List<Pergunta> perguntas) throws Exception {
         for (Pergunta pergunta : perguntas) {
             boolean respostaValida = false;
@@ -160,11 +159,9 @@ public class Lista {
                     System.out.println("Responda com " + pergunta.getPersonalidade1() + " ou " + pergunta.getPersonalidade2() + ": ");
                     String resposta = Console.lerString();
 
-                    if (!resposta.equals("E") && !resposta.equals("I") && !resposta.equals("S") &&
-                            !resposta.equals("N") && !resposta.equals("T") && !resposta.equals("F") &&
-                            !resposta.equals("P") && !resposta.equals("J")) {
+                    if (!resposta.equals(pergunta.getPersonalidade1().toString()) && !resposta.equals(pergunta.getPersonalidade2().toString())) {
                         throw new Exception("\nRESPOSTA INVÁLIDA! Por favor, responda com " +
-                                pergunta.getPersonalidade1() + " ou " + pergunta.getPersonalidade2());
+                        pergunta.getPersonalidade1() + " ou " + pergunta.getPersonalidade2());
                     }
 
                     if (resposta.equals(pergunta.getPersonalidade1().toString())) {
@@ -173,11 +170,10 @@ public class Lista {
                         pergunta.getPersonalidade2().incrementarPontuacao();
                     }
 
-                    respostaValida = true; // Marca a resposta como válida para sair do loop
+                    respostaValida = true;
 
                 } catch (Exception e) {
                     System.out.println(e.getMessage());
-                    // Repetir a pergunta sem interromper o loop for
                 }
             }
         }
