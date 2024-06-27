@@ -16,7 +16,12 @@ public class Sistema {
                 System.out.print("Digite seu nome: ");
                 String nomeUsuario = Console.lerString();
                 Personalidade.reiniciarPontuacoes();
-                Lista.apresentarPerguntas(perguntas);
+                try {
+                    Lista.apresentarPerguntas(perguntas);
+                } catch (Exception e) {
+                    System.out.println("Erro ao apresentar perguntas: " + e.getMessage());
+                    return;
+                }
                 Resultados.quiz(perguntas, nomeUsuario);
                 Resultados.armazenarResultado(nomeUsuario, perguntas);
                 Resultados.exibirResultado(nomeUsuario, perguntas);

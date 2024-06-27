@@ -53,14 +53,15 @@ public class Resultados {
     }
     
     public static void salvarResultados() {
-        try (PrintWriter writer = new PrintWriter(new FileWriter(ARQUIVO))) {
+        try (PrintWriter writer = new PrintWriter(new FileWriter(ARQUIVO, true))) {
             for (Map.Entry<String, Map<Personalidade, Integer>> entry : resultados.entrySet()) {
+                writer.println("\n-\n");
                 writer.println(entry.getKey());
                 for (Map.Entry<Personalidade, Integer> pontuacao : entry.getValue().entrySet()) {
                     writer.println(pontuacao.getKey().getNome() + ":" + pontuacao.getValue());
                 }
                 String vocacao = Vocacao.determinarVocacao(entry.getValue());
-                writer.println("\nVocação:" + vocacao);
+                writer.println("\nVocação: " + vocacao);
                 writer.println();
             }
         } catch (IOException e) {
@@ -83,7 +84,7 @@ public class Resultados {
                 } else if (nomeUsuario == null) {
                     nomeUsuario = linha;
                     pontuacoes = new HashMap<>();
-                } else if (linha.startsWith("\nVocação:")) {
+                } else if (linha.startsWith("\nVocação: ")) {
                 } else {
                     String[] partes = linha.split(":");
                     if (partes.length == 2) {
